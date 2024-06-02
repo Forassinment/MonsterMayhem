@@ -1,0 +1,227 @@
+/* Add these styles for the modal popup */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #c56e27;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    line-height: 1.5;
+    border: 1px solid #bd2626;
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+}
+
+.modal-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #343e49; /* Primary color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #2e5885; /* Button hover color */
+}
+
+/* Existing styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #bb6e6e; /* Background color */
+}
+
+#game-container {
+    text-align: center;
+    background-color: rgba(160, 85, 85, 0.9); /* Adding a semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(134, 106, 106, 0.1);
+}
+
+#game-title {
+    color: #007bff; /* Primary color */
+    font-size: 56px;
+}
+
+.player-names-container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 80px;
+}
+
+.input-container input[type="text"] {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #b93838;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-container input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff; /* Primary color */
+}
+
+.image-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#game-content {
+    display: flex;
+    width: 100%;
+}
+
+#board-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#board {
+    margin: 20px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: middle;
+    position: relative; /* Added to support absolutely positioned elements */
+}
+
+#player-actions {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Button hover color */
+}
+
+#start-game, #show-rules {
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: #007bff; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-game:hover, #show-rules:hover {
+    background-color: #0056b3; /* Button hover color */
+}
+
+#status {
+    color: #000; /* Text color */
+    font-size: 20px;
+    margin-top: 20px; /* Added top spacing for better visualization */
+}
+
+.light-green {
+    background-color: #00ff55; /* Light green color for cells */
+}
+
+.light-orange {
+    background-color: #fbff00; /* Light red color for cells */
+}
+
+.light-yellow {
+    background-color: #00fff2; /* Light green color for cells */
+}
+
+.light-blue {
+    background-color: #fa05d1; /* Light red color for cells */
+}
+
+.watermark {
+    position: absolute;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.2); /* Black color with 20% opacity */
+    pointer-events: none; /* Ignore clicks on text */
+    top: 2px;
+    left: 2px;
+}
+
+#player-stats {
+    margin: 20px;
+    width: 20%;
+    background-color: #705454;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.eliminated-players-container {
+    margin: 20px;
+    width: 20%;
+    background-color: #6e5757;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.monster-image {
+    width: 70px;
+    height: 70px;
+}
+
+
+

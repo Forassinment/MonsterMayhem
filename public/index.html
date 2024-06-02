@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1 id="game-title"> <img src="image0.jpeg" alt="Game Image" id="game-image"></h1>
+        <h2>Pruthvi mulik Student number 2021405</h2>
+        <div id="player-names" class="player-names-container">
+            <div class="input-container">
+                <input type="text" id="player1" placeholder="Enter the name Player1">
+                <input type="text" id="player2" placeholder="Enter the name player2">
+                <input type="text" id="player3" placeholder="Enter the name player3">
+                <input type="text" id="player4" placeholder="Enter the name player4">
+                <button id="start-game">Lets Go!</button>
+                <button id="show-rules">Game Rules</button>
+                <button id="show-stats">Progress board</button>
+            </div>
+            <div class="image-container">
+               
+            </div>
+        </div>
+        <div id="game-content" class="hidden">
+            <div id="eliminated-players" class="eliminated-players-container hidden">
+                <h2><img src="wasted.png" alt="Game Image" id="game-image"></h2>
+                <div id="eliminated-list"></div>
+            </div>
+            <div id="board-container">
+                <div id="board">
+                    <div id="status" class="status"></div>
+                    <div id="player-actions" class="hidden">
+                        <button id="insert-monster">Add Monster</button>
+                        <button id="move-monster">Move Monster</button>
+                        <button id="skip-turn">Skip Turn</button> 
+                    </div>
+                    <table></table>
+                </div>
+                <div id="player-stats" class="hidden">
+                    <h2><img src="Stats.png" alt="Game Image" id="game-image"></h2>
+                    <div id="stats"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Popup -->
+    <div id="monster-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Select a Monster</h2>
+            <button class="monster-option" data-monster="1">
+                <img src="vampire.png" alt="Vampire" class="monster-image">
+            </button>
+            <button class="monster-option" data-monster="2">
+                <img src="werewolf.png" alt="Werewolf" class="monster-image">
+            </button>
+            <button class="monster-option" data-monster="3">
+                <img src="ghost.png" alt="Ghost" class="monster-image">
+            </button>
+        </div>
+    </div>
+
+    <!-- Popup Message Modal -->
+    <div id="message-modal" class="modal hidden">
+        <div class="modal-content">
+            <p id="message-text"></p>
+            <button id="close-message">OK</button>
+        </div>
+    </div>
+
+    <!-- Move Input Modal -->
+    <div id="move-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Enter Move Coordinates</h2>
+            <p>
+                From: 
+                <input type="number" id="from-row" placeholder="Row">
+                <input type="number" id="from-col" placeholder="Column">
+            </p>
+            <p>
+                To: 
+                <input type="number" id="to-row" placeholder="Row">
+                <input type="number" id="to-col" placeholder="Column">
+            </p>
+            <button id="submit-move">Move</button>
+            <button id="cancel-move">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Game Rules Modal -->
+    <div id="rules-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Game Rules</h2>
+            <p>
+                1. Each player has 15 monsters to place on the board.<br>
+                2. The game is played in turns. On each turn, a player can add, move, or skip.<br>
+                3. Combat rules:<br>
+                &nbsp;&nbsp;- Vampire vs Werewolf: Werewolf is removed.<br>
+                &nbsp;&nbsp;- Werewolf vs Ghost: Ghost is removed.<br>
+                &nbsp;&nbsp;- Ghost vs Vampire: Vampire is removed.<br>
+                &nbsp;&nbsp;- Same type: Both are removed.<br>
+                4. A player is eliminated if they lose 10 monsters or run out of monsters to place.<br>
+                5. The last remaining player wins the game.
+            </p>
+            <button id="close-rules">Close</button>
+        </div>
+    </div>
+
+    <!-- Stats Modal -->
+    <div id="stats-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Game Stats</h2>
+            <div id="game-stats"></div>
+            <button id="close-stats">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
